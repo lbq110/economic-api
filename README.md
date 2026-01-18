@@ -28,6 +28,17 @@ cd economic-api
 
 ### 2. 获取 API Keys
 
+#### Supabase (数据库托管)
+
+1. 访问 [Supabase](https://supabase.com/) 并注册账号
+2. 点击 "New Project" 创建新项目
+3. 选择区域（推荐选择离你近的）
+4. 等待项目创建完成（约2分钟）
+5. 进入 **Settings** → **API**，获取：
+   - `Project URL` → 用于 `SUPABASE_URL`
+   - `anon public` key → 用于 `SUPABASE_ANON_KEY`
+   - `service_role` key → 用于 `SUPABASE_SERVICE_ROLE_KEY`（注意保密）
+
 #### FRED API Key (美联储经济数据)
 
 1. 访问 [FRED API Keys](https://fred.stlouisfed.org/docs/api/api_key.html)
