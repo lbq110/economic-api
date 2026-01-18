@@ -1,0 +1,2 @@
+# Disable JWT verification for local development
+verify_jwt = false

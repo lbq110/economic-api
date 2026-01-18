@@ -1,0 +1,3 @@
+# Disable JWT verification for local development
+# The new Supabase CLI uses ES256 which has compatibility issues
+verify_jwt = false

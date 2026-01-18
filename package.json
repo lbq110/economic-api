@@ -1,0 +1,31 @@
+{
+  "name": "macrobet-economic-api",
+  "version": "1.0.0",
+  "description": "MacroBet Economic Data API - FRED data via Supabase",
+  "main": "index.js",
+  "scripts": {
+    "supabase:start": "./supabase-cli start",
+    "supabase:stop": "./supabase-cli stop",
+    "supabase:status": "./supabase-cli status",
+    "supabase:reset": "./supabase-cli db reset",
+    "supabase:migrate": "./supabase-cli db push",
+    "supabase:seed": "./supabase-cli db reset --db-url postgresql://postgres:postgres@127.0.0.1:54322/postgres",
+    "functions:serve": "./supabase-cli functions serve --env-file .env.local",
+    "functions:deploy": "./supabase-cli functions deploy fetch-fred-data",
+    "fetch:test": "curl -X POST http://127.0.0.1:54321/functions/v1/fetch-fred-data -H 'Authorization: Bearer YOUR_ANON_KEY' -H 'Content-Type: application/json'"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.0"
+  },
+  "keywords": [
+    "macrobet",
+    "fred",
+    "economic-data",
+    "supabase"
+  ],
+  "author": "",
+  "license": "MIT"
+}
