@@ -41,7 +41,7 @@ SELECT cron.schedule(
     url := 'https://whsyjoyuzuqzybyttxvm.supabase.co/functions/v1/fetch-fred-data',
     headers := jsonb_build_object(
       'Content-Type', 'application/json',
-      'Authorization', 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Indoc3lqb3l1enVxenlieXR0eHZtIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc2ODcwMTg1MCwiZXhwIjoyMDg0Mjc3ODUwfQ.5mZ-NBG-vyDj_TV2j78F_-XlAsNNPvH1SLceYoQBM7U'
+      'Authorization', 'Bearer YOUR_SERVICE_ROLE_KEY'
     ),
     body := '{}'::jsonb
   );
@@ -91,7 +91,7 @@ npm install @supabase/supabase-js
 
 ```env
 NEXT_PUBLIC_SUPABASE_URL=https://whsyjoyuzuqzybyttxvm.supabase.co
-NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Indoc3lqb3l1enVxenlieXR0eHZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njg3MDE4NTAsImV4cCI6MjA4NDI3Nzg1MH0.Z3UWIjdd1rga86ty-nqzbm4I-nELqYTrsjvrnHKh8Oc
+NEXT_PUBLIC_SUPABASE_ANON_KEY=YOUR_SUPABASE_ANON_KEY
 ```
 
 ### 步骤 2.3: 复制 Supabase 客户端代码
@@ -303,7 +303,7 @@ const data = await getCategoriesWithIndicators();
 ```env
 # Supabase 经济数据 API
 NEXT_PUBLIC_SUPABASE_URL=https://whsyjoyuzuqzybyttxvm.supabase.co
-NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Indoc3lqb3l1enVxenlieXR0eHZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njg3MDE4NTAsImV4cCI6MjA4NDI3Nzg1MH0.Z3UWIjdd1rga86ty-nqzbm4I-nELqYTrsjvrnHKh8Oc
+NEXT_PUBLIC_SUPABASE_ANON_KEY=YOUR_SUPABASE_ANON_KEY
 ```
 
 ### Vite 项目
@@ -311,7 +311,7 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzd
 ```env
 # Supabase 经济数据 API
 VITE_SUPABASE_URL=https://whsyjoyuzuqzybyttxvm.supabase.co
-VITE_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Indoc3lqb3l1enVxenlieXR0eHZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njg3MDE4NTAsImV4cCI6MjA4NDI3Nzg1MH0.Z3UWIjdd1rga86ty-nqzbm4I-nELqYTrsjvrnHKh8Oc
+VITE_SUPABASE_ANON_KEY=YOUR_SUPABASE_ANON_KEY
 ```
 
 然后修改 `supabase.ts` 中的环境变量读取:
@@ -327,7 +327,7 @@ const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
 ```env
 # Supabase 经济数据 API
 REACT_APP_SUPABASE_URL=https://whsyjoyuzuqzybyttxvm.supabase.co
-REACT_APP_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Indoc3lqb3l1enVxenlieXR0eHZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njg3MDE4NTAsImV4cCI6MjA4NDI3Nzg1MH0.Z3UWIjdd1rga86ty-nqzbm4I-nELqYTrsjvrnHKh8Oc
+REACT_APP_SUPABASE_ANON_KEY=YOUR_SUPABASE_ANON_KEY
 ```
 
 ---
@@ -526,7 +526,7 @@ SELECT cron.schedule(
     url := 'https://whsyjoyuzuqzybyttxvm.supabase.co/functions/v1/fetch-bea-data',
     headers := jsonb_build_object(
       'Content-Type', 'application/json',
-      'Authorization', 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Indoc3lqb3l1enVxenlieXR0eHZtIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc2ODcwMTg1MCwiZXhwIjoyMDg0Mjc3ODUwfQ.5mZ-NBG-vyDj_TV2j78F_-XlAsNNPvH1SLceYoQBM7U'
+      'Authorization', 'Bearer YOUR_SERVICE_ROLE_KEY'
     ),
     body := '{}'::jsonb
   );
